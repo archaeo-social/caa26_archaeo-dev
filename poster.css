@@ -86,18 +86,22 @@ header .subtitle {
 
 /* Abstract/introduction */
 #abstract {
-	font-size: 18pt;
+	font-size: 26pt;
 	grid-column: span 2;
 	padding: 30mm 15mm 30mm 30mm;
 }
 
 #abstract h1 {
-	font-size: 64pt;
+	font-size: 40pt;
 	margin: 0;
 }
 
 #abstract-body {
 	text-align: justify;
+}
+
+#abstract-body h2 {
+	font-size: 32pt;
 }
 
 #abstract-refs {
