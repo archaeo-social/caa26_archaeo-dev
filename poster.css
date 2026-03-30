@@ -1,0 +1,179 @@
+/* Fixed width A0 layout */
+@page {
+	size: A0 portrait;
+}
+
+@media screen {
+	body {
+		background: #333333;
+	}
+
+	#page {
+		width: 841mm;
+		height: 1189mm;
+		background: #ffffff;
+		display: block;
+		margin: 2em auto 2em auto;
+		position: relative;
+		box-shadow: 0 0 2em 0 rgba(0,0,0,0.9);
+	}
+}
+
+@media print {
+	body, #page {
+		margin: 0;
+		width: 841mm;
+		height: 1189mm;
+	}
+}
+
+/* Typography */
+body {
+	font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+	font-size: 24pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+/* Layout */
+#page {
+	display: grid;
+	grid-template-columns: repeat(6, calc(841mm / 6));
+	grid-template-rows: 1fr 4fr 2fr 2fr 1fr;
+}
+
+/* Header */
+header {
+	background: rgb(29, 30, 32);
+	color: white;
+	display: flex;
+	grid-column: span 6;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30mm;
+}
+
+header h1 {
+	font-size: 72pt;
+	transform: skew(-10deg);
+}
+
+header .subtitle {
+	font-size: 48pt;
+}
+
+.logotype {
+	display: inline-block;
+	font-weight: 900;
+	padding: 5mm 10mm;
+	text-transform: uppercase;
+	box-shadow: 3mm 3mm 0px #000;
+}
+
+#logotype-archaeo-social {
+	background: #563ACC;
+}
+
+#logotype-archaeo-dev {
+	background: #eb6420;
+}
+
+#header-logo {
+	height: 120mm;
+}
+
+/* Abstract/introduction */
+#abstract {
+	font-size: 18pt;
+	grid-column: span 2;
+	padding: 30mm 15mm 30mm 30mm;
+}
+
+#abstract h1 {
+	font-size: 64pt;
+	margin: 0;
+}
+
+#abstract-body {
+	text-align: justify;
+}
+
+#abstract-refs {
+	font-size: 18pt;
+}
+
+#abstract-refs h2 {
+	margin-bottom: 1rem;
+}
+
+#abstract-refs ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 0 5mm;
+}
+
+#abstract-refs li {
+	text-indent: -5mm;
+}
+
+/* Guestbook */
+#guestbook {
+	display: flex;
+	flex-direction: column;
+	grid-column: span 4;
+	padding: 30mm 30mm 30mm 15mm;
+}
+
+#guestbook h1 {
+	font-size: 36pt;
+	margin: 0;
+}
+
+
+#guestbook .subtitle {
+	margin-top: 0;
+}
+
+
+#guestbook-signatures {
+	border: 2mm dashed #999999;
+	flex: 1;
+}
+
+/* Services */
+.service {
+	align-items: center;
+	background: rgb(29, 30, 32);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	grid-column: span 2;
+	padding: 15mm;
+}
+
+#matrix,
+#webring,
+#more-services {
+	background: rgb(55, 56, 62);
+}
+
+.service h1 {
+	background: yellow;
+	color: rgb(29, 30, 32);
+	box-shadow: 3mm 3mm 0px #000;
+	display: inline-block;
+	font-size: 36pt;
+	font-weight: 900;
+	margin: 0;
+	padding: 5mm 10mm;
+	text-transform: uppercase;
+	transform: skew(-10deg);
+}
+
+/* Footer */
+footer {
+	grid-column: span 6;
+	padding: 30mm;
+}
