@@ -84,6 +84,9 @@ header .subtitle a:hover
 {
   font-family: monospace;
   color: white;
+  text-decoration: none;
+  border-bottom: 1px solid yellow;
+  padding-bottom: 1mm;
 }
 
 .logotype {
@@ -94,12 +97,20 @@ header .subtitle a:hover
   box-shadow: 3mm 3mm 0px #000;
 }
 
-#logotype-archaeo-social {
+#logotype-archaeo-social,
+#fediverse h1,
+#matrix h1,
+#webring h1 {
   background: #563ACC;
+  color: white;
 }
 
-#logotype-archaeo-dev {
+#logotype-archaeo-dev,
+#forgejo h1,
+#hedgedoc h1,
+#more-services h1 {
   background: #eb6420;
+  color: rgb(29, 30, 32);
 }
 
 #header-logo {
@@ -108,7 +119,7 @@ header .subtitle a:hover
 
 /* Abstract/introduction */
 #abstract {
-  font-size: 26pt;
+  fonsize: 26pt;
   grid-column: span 2;
   padding: 30mm 15mm 30mm 30mm;
 }
@@ -316,4 +327,7 @@ header .subtitle a:hover
   font-size: 30pt;
   font-family: monospace;
   font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid yellow;
+  padding-bottom: 1mm;
 }
